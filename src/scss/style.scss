@@ -1,0 +1,278 @@
+// If you want to override variables do it here
+@import "variables";
+
+// Import CoreUI styles
+@import "~@coreui/coreui/scss/coreui.scss";
+
+// If you want to add something do it here
+// @import "custom";
+
+@import "login";
+
+@import "nav";
+
+@import "profile";
+
+@import "editor";
+
+@import "custom";
+
+@import "search";
+
+
+@import "chat";
+
+.widgetRevision {
+  transition: all 0.25s linear;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.4);
+  height: 100;
+  width: 500;
+}
+
+.widgetDeactivate {
+  background-color: #b2b1b9;
+}
+
+.widgetRevision:hover {
+  cursor: pointer;
+  box-shadow: -1px 10px 29px 0px rgba(0, 0, 0, 0.8);
+}
+
+// refaire du bon sass
+a.link-card {
+  text-decoration: none;
+}
+.link-card h5 {
+  text-decoration: none;
+  color: rgba(0, 0, 21, 0.5);
+  font-size: larger;
+  transition: all 0.25s linear;
+}
+
+.link-card:hover h5 {
+  text-decoration: none;
+  color: #3a9679;
+}
+
+/* via https://projects.lukehaas.me/css-loaders/ */
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+.loader {
+  margin: 60px auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(255, 151, 0, 0.2);
+  border-right: 1.1em solid rgba(255, 151, 0, 0.2);
+  border-bottom: 1.1em solid rgba(255, 151, 0, 0.2);
+  border-left: 1.1em solid #3a9679;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.CardDropZone {
+  background-color: white;
+  padding: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
+    0 5px 15px 0 rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+.Filename {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #555;
+}
+
+.Row {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.Files {
+  width: 100%;
+}
+
+.CheckIcon {
+  opacity: 0.5;
+  margin-left: 32px;
+}
+
+.ProgressWrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+}
+
+// ABSOLUTE LOADER
+
+/* Absolute Center Spinner */
+.loader-absolute {
+  position: fixed;
+  z-index: 999;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+}
+
+/* Transparent Overlay */
+.loader-absolute:before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* :not(:required) hides these rules from IE9 and below */
+.loader-absolute:not(:required) {
+  /* hide "loader-absolute..." text */
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.loader-absolute:not(:required):after {
+  content: "";
+  display: block;
+  font-size: 10px;
+  width: 50px;
+  height: 50px;
+  margin-top: -0.5em;
+
+  border: 15px solid rgba(33, 150, 243, 1);
+  border-radius: 100%;
+  border-bottom-color: transparent;
+  -webkit-animation: spinner 1s linear 0s infinite;
+  animation: spinner 1s linear 0s infinite;
+}
+
+/* Animation */
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 100px;
+  right: 100px;
+  background-color: #0c9;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+}
+
+.my-float {
+  margin-top: 22px;
+}
